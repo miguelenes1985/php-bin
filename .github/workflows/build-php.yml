@@ -22,7 +22,7 @@ jobs:
     strategy:
       matrix:
         version: ["8.3", "8.4"]
-        os: [ "macos-13", "macos-latest", "windows-latest", "ubuntu-latest", "ubuntu-24.04-arm" ]
+        os: [ "macos-13", "macos-latest", "ubuntu-latest", "ubuntu-24.04-arm" ]
 
     continue-on-error: true
 
@@ -149,13 +149,17 @@ jobs:
         if: steps.cache-spc-downloads.outputs.cache-hit != 'true'
         run: |
           cd ../static-php-cli
-          ./bin/${{ env.SPC_BINARY }} download --with-php=${{ matrix.version }} --for-extensions "${{ env.PHP_EXTENSIONS }}" --prefer-pre-built --retry=3
+          ./bin/${{ env.SPC_BINARY }} download --with-php=${{ matrix.version }} --for-extensions "${{ env.PHP_EXTENSIONS }}" --prefer-pre-built --retry=5
           cd ../php-bin
 
       - name: Build PHP
         run: |
           cd ../static-php-cli
+          if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
           ./bin/${{ env.SPC_BINARY }} build --build-cli "${{ env.PHP_EXTENSIONS }}" --with-libs="${{ env.PHP_LIBS }}" --debug
+          else
+          ./bin/${{ env.SPC_BINARY }} build --build-cli "${{ env.PHP_EXTENSIONS }}" --with-libs="${{ env.PHP_LIBS }}" --debug
+          fi
           cd ../php-bin
 
       - name: Get built PHP version
