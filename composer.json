@@ -1,6 +1,7 @@
 {
     "name": "miguelenes1985/php-bin",
     "description": "PHP binaries used by the NativePHP framework",
+    "version": "1.0.0",
     "keywords": [
         "nativephp",
         "php"
