@@ -5,13 +5,7 @@
 You can install the package via Composer:
 
 ```shell
-composer require nativephp/php-bin --dev
-```
-
-or NPM:
-
-```shell
-npm -i @nativephp/php-bin --save-dev
+composer require miguelenes1985/php-bin --dev
 ```
 
 ### ℹ️ Heads up...
