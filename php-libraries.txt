@@ -1,1 +1,1 @@
-libjpeg,freetype,libwebp,libavif,gettext
+libjpeg,freetype,libwebp,gettext
