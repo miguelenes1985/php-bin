@@ -1,8 +1,13 @@
 [
+    "pkg-config",
+    "lib-base",
+    "micro",
+    "php",
     "bzip2",
     "zlib",
     "openssl",
     "libiconv",
+    "icu",
     "libxml2",
     "curl",
     "libpng",
@@ -10,5 +15,6 @@
     "libjpeg",
     "freetype",
     "sqlite",
-    "libzip"
+    "libzip",
+    "gettext"
 ]
