@@ -1,1 +1,1 @@
-apcu,bcmath,curl,exif,gd,igbinary,inotify,intl,mbstring,opcache,openssl,opentelemetry,pcntl,pdo_sqlite,readline,sockets,sqlite3,xml,xmlreader,zip,zlib,gettext
+bcmath,bz2,ctype,curl,dom,fileinfo,filter,gd,iconv,mbstring,opcache,openssl,pdo,pdo_sqlite,phar,session,simplexml,sockets,sqlite3,tokenizer,xml,zip,zlib,intl,gettext
